@@ -1,0 +1,1157 @@
+{% load static %}{% load mathfilters %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Aria is a business focused HTML landing page template built with Bootstrap to help you create lead generation websites for companies and their services.">
+    <meta name="author" content="Inovatik">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="Zewa Feeds" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content="Zewa Feeds"/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="Redefining what waste can do" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content={{tm.image.url}} /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta property="og:type" content="Products and Services" />
+
+    <!-- Website Title -->
+    <title>ZEWA FEEDS</title>
+    
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
+    
+    <link type="text/css" rel="stylesheet" href={% static "web/css/bootstrap.css" %} />
+    <link type="text/css" rel="stylesheet" href={% static "web/css/fontawesome-all.css" %} />
+    <link type="text/css" rel="stylesheet" href={% static "web/css/swiper.css" %}>
+    <link type="text/css" rel="stylesheet" href={% static "web/css/magnific-popup.css" %}>
+    <link type="text/css" rel="stylesheet" href={% static "web/css/styles.css" %}>
+    
+
+    <!-- CSS only -->
+   
+	<!-- Favicon  -->
+    <link rel="icon" href={{tm.image.url}}>
+    <style>
+        
+
+    .link-text {
+        color:#175CA7;
+        text-decoration:none;
+        font-weight: bold;
+    }
+
+    .sheetup
+    {   background-color: #fdfdfd; 
+        overflow-x: hidden; 
+    }
+
+
+    .ithramathi {
+        object-fit: cover;
+        max-height: 300px;
+        min-width: fit-content;
+        min-height: 300px;
+      }
+
+      .ithravenam {
+        object-fit: cover;
+        max-height: 800px;
+        min-width: auto;
+        min-height: 800px;
+      }
+
+    .header {
+	    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url({{home.image.url}}) center center no-repeat;
+	    background-size: cover;
+        }
+    /*methodology */
+    .accordion .area-1 {
+	height: 27rem;
+	background: url({{method.image1.url}}) center center no-repeat;
+	background-size: cover;
+    }
+
+    .accordion .area-1 {
+		width: 50%;
+		height: 100%;
+		display: inline-block;
+	}
+
+    .tabs .area-2 {
+	height: 27rem;
+	background: url({{method.image3.url}}) center center no-repeat;
+	background-size: cover;
+    }
+    .tabs .area-3 {
+	height: 27rem;
+	background: url({{method.image4.url}}) center center no-repeat;
+	background-size: cover;
+    }
+    .tabs .area-4 {
+	height: 27rem;
+	background: url({{method.image5.url}}) center center no-repeat;
+	background-size: cover;
+    }
+
+    .dbox {
+    float: left;
+    margin: 20px;
+    background-color: grey;
+    padding-bottom: 100%;
+    margin-bottom: -100%;
+    flex: 1;
+    }
+
+
+
+    </style>
+
+
+<style>
+    @media (max-width: 768px) {
+      .carousel1-inner .carousel-item > div {
+          display: none;
+      }
+      .carousel1-inner .carousel-item > div:first-child {
+          display: block;
+      }
+  }
+  
+  .carousel1-inner .carousel-item.active,
+  .carousel1-inner .carousel-item-next,
+  .carousel1-inner .carousel-item-prev {
+      display: flex;
+  }
+  
+  /* display 3 */
+  @media (min-width: 768px) {
+      
+      .carousel1-inner .carousel-item-right.active,
+      .carousel1-inner .carousel-item-next {
+        transform: translateX(33.333%);
+      }
+      
+      .carousel1-inner .carousel-item-left.active, 
+      .carousel1-inner .carousel-item-prev {
+        transform: translateX(-33.333%);
+      }
+  }
+  
+  .carousel1-inner .carousel-item-right,
+  .carousel1-inner .carousel-item-left{ 
+    transform: translateX(0);
+  }
+  
+  
+  </style>
+
+
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+    
+    <!-- Preloader -->
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+    
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top ">
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
+
+        <!-- Image Logo -->
+        <a class="navbar-brand logo-image" href="/"><img src={{logo.image.url}} alt="alternative"></a>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <!-- end of mobile menu toggle button -->
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" id="hpressed">
+                    <a class="nav-link page-scroll" href="#header">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item pressed">
+                    <a class="nav-link page-scroll" href="#intro">ABOUT US</a>
+                </li>
+                <li class="nav-item pressed" id="nmeth">
+                    <a class="nav-link page-scroll" href="#details">METHODOLOGY</a>
+                </li>
+                <li class="nav-item pressed">
+                    <a class="nav-link page-scroll" href="#products">PRODUCTS</a>
+                </li>
+                <li class="nav-item pressed">
+                    <a class="nav-link page-scroll" href="#services">SERVICES</a>
+                </li>
+                <!-- Dropdown Menu -->          
+                <li class="nav-item pressed">
+                    <a class="nav-link page-scroll" href="#projects">GALLERY</a>
+                </li>
+
+
+            <!-- Dropdown Menu -->          
+            <li class="nav-item dropdown">
+                <div class="nav-link dropdown-toggle page-scroll" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">JOIN US</div>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#contact"><span class="item-text">Volunteer with us</span></a>
+                    <div class="dropdown-items-divide-hr"></div>
+                    <a class="dropdown-item" href="#contact"><span class="item-text">Intern with us</span></a>
+                </div>
+            </li>
+            <!-- end of dropdown menu -->
+
+
+                <li class="nav-item pressed">
+                    <a class="nav-link page-scroll" href="#contact">CONTACT US</a>
+                </li>
+            </ul>
+            <span class="nav-item social-icons">
+                {%if link.facebook is not None%}
+                <span class="fa-stack">
+                    <a href="{{link.facebook}}">
+                        <span class="hexagon"></span>
+                        <i class="fab fa-facebook-f fa-stack-1x"></i>
+                    </a>
+                </span>
+                {%endif%}
+                {%if link.twitter is not None%}
+                <span class="fa-stack">
+                    <a href="{{link.twitter}}" target="_blank">
+                        <span class="hexagon"></span>
+                        <i class="fab fa-twitter fa-stack-1x"></i>
+                    </a>
+                </span>
+                {%endif%}
+            </span>
+        </div>
+    </nav> <!-- end of navbar -->
+    <!-- end of navbar -->
+
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-container">
+                            <h1><span id="js-rotating">{{home.caption}}</span></h1>
+                            <p class="p-heading p-large">{{home.moto}}</p>
+                            <a class="btn-solid-lg page-scroll" href="#intro">DISCOVER</a>
+                        </div>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of header-content -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+        
+    <!-- mission -->
+    <div id="mission" class="form-1">
+        <div class="container">
+            <div class="row">
+                <div class = "col-lg-12">
+            <h2>Our Mission </h2>
+
+            <p class="white">
+                {{home.mission}}
+            </p>
+        </div>
+        </div>
+        </div>
+    </div> <!-- end mission -->
+
+
+    <!-- Intro -->
+    <div id="intro" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="text-container">
+                        <h2>{{intro.caption}}</h2>
+                        <p>{{intro.text1|safe}}</p>
+                        <p>{{intro.text2|safe}}</p>
+                        
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-7">
+                    <div class="image-container">
+                        <img class="img-fluid" src= {{intro.image.url}} alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of intro -->
+
+
+    
+
+
+
+    <!-- Description -->
+    <div id="intro1" class="cards-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                    <!-- Card -->
+                    <div class="card jcard">
+                        <span class="fa-stack">
+                            <span class="hexagon"></span>
+                            <i class="fas fa-users fa-stack-1x"></i>
+                        </span>
+                        <div class="card-body">
+                            <h4 class="card-title">{{intro.head3|safe}}</h4>
+                            <p>{{intro.text3|safe}}</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card jcard">
+                        <span class="fa-stack">
+                            <span class="hexagon"></span>
+                            <i class="fas fa-tint fa-stack-1x"></i>
+                        </span>
+                        <div class="card-body">
+                            <h4 class="card-title">{{intro.head4}}</h4>
+                            <div class = "jp">
+                            <p>
+                                {{intro.text4|safe}}
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card jcard">
+                        <span class="fa-stack">
+                            <span class="hexagon"></span>
+                            <i class="fas fa-chart-pie fa-stack-1x"></i>
+                        </span>
+                        <div class="card-body">
+                            <h4 class="card-title">{{intro.head5}}</h4>
+                            <p>
+                                {{intro.text5|safe}}</p>
+                            </div>
+                    </div>
+                    <!-- end of card -->
+                    <span data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" role="button">
+                        <span class="circle-numbering"></span><span class="accordion-title">
+                            {{intro.text6|safe}}
+                        </span>
+                    </span>
+                    <div class="testimonial-author">
+                        
+                        </div>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-1 -->
+    <!-- end of description -->
+
+
+
+    <!--METHODOLOGY-->
+    <div id="details">
+    <!-- Details 1 -->
+	<div id="details1" class="accordion">
+		<div class="area-1">
+		</div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2">
+            
+            <!-- Accordion -->
+            <div class="accordion-container" id="accordionOne">
+                <h2>{{method.caption}}</h2>
+                <div class="item">
+                    <div id="headingOne">
+                        <span data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" role="button">
+                            <span class="circle-numbering"></span><span class="accordion-title">{{method.text1}}</span>
+                        </span>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionOne">
+                        <div class="accordion-body">
+                    {{method.text2}}
+                        </div>
+                    </div>
+                </div> <!-- end of item -->
+            
+
+            </div> <!-- end of accordion-container -->
+            <!-- end of accordion -->
+
+		</div> <!-- end of area-2 -->
+    </div> <!-- end of accordion -->
+    <!-- end of details 1 -->
+
+
+    <!-- Details 2 -->
+	<div id="details2" class="tabs">
+        <div class="area-1">
+            <div class="tabs-container">
+                
+                <!-- Tabs Links -->
+                
+                <ul class="nav nav-tabs" id="ariaTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-th"></i>{{method.head3}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false"><i class="fas fa-th"></i> {{method.head4}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav-tab-3" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false"><i class="fas fa-th"></i> {{method.head5}}</a>
+                    </li>
+                </ul>
+                <!-- end of tabs links -->
+                
+                <!-- Tabs Content -->
+                <div class="tab-content" id="ariaTabsContent">
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+                        <h4></h4>
+                        <p>
+                            {{method.text3|safe}}
+                        </p>
+                        
+                     
+                        
+                    </div> <!-- end of tab-pane --> 
+                    <!-- end of tab -->
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
+                        <h4></h4>
+                        <p>
+                            {{method.text4|safe}}
+                        </p>
+                        
+                    </div> <!-- end of tab-pane -->
+                    <!-- end of tab -->
+
+                    <!-- Tab -->
+                    <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
+                        <h4></h4>
+                        <p>
+                            {{method.text5|safe}}
+                        </p>
+                        
+                    </div> <!-- end of tab-pane -->
+                    <!-- end of tab -->
+
+                </div> <!-- end of tab-content -->
+                <!-- end of tabs content -->
+
+            </div> <!-- end of tabs-container -->
+        </div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div id="rollingdetail" class="area-2"></div> <!-- end of area-2 -->
+    </div> <!-- end of tabs -->
+    <!-- end of details 2 -->
+    </div>
+    <!--METHODOLOGY-->
+
+        <!-- Services -->
+        <div id="products" class="cards-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title">SERVICE AND PRODUCTS</div>
+                        <h2>Products </h2>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+                <div class="row">
+                        
+                        <!-- Card -->
+                        <div class="card col-lg-12 col-centered jcard" >
+                            <div class="pi card-image">
+                                <img class="img-fluid" src={{product.image1.url}} alt="alternative">
+                            </div>
+                            <div class="pb card-body">
+                                <h3 class="card-title">{{product.head1|safe}}</h3>
+                                <p>{{product.text1|safe}}</p>
+                                
+                                
+                            </div>
+                            <div class="button-container">
+                                <a class="btn-solid-reg page-scroll" href="#callMe">Know More</a>
+                            </div> <!-- end of button-container -->
+                        </div>
+                        <!-- end of card -->
+                        <!-- Card -->
+                        <div class="card col-lg-12 col-centered jcard" >
+                            <div class="pi card-image">
+                                <img class="img-fluid" src={{product.image2.url}} alt="alternative">
+                            </div>
+                            
+                            <div class="pb card-body">
+                                <h3 class="card-title">{{product.head2|safe}}</h3>
+                                <p>{{product.text2|safe}}</p>
+                                    
+                            </div>
+                            <div class="button-container">
+                                <a class="btn-solid-reg page-scroll" href="#callMe">Know More</a>
+                            </div> <!-- end of button-container -->
+                        </div>
+                        <!-- end of card -->                        
+                                <!-- Card -->
+                        <div class="card col-lg-12 col-centered jcard" >
+                            <div class="pi card-image">
+                                <img class="img-fluid" src={{product.image3.url}} alt="alternative">
+                            </div>
+                            <div class="pb card-body">
+                                <h3 class="card-title">{{product.head3|safe}}</h3>
+                                <p>{{product.text3|safe}}</p>
+                                
+                                
+                            </div>
+                            <div class="button-container">
+                                <a class="btn-solid-reg page-scroll" href="#callMe">Know More</a>
+                            </div> <!-- end of button-container -->
+                        </div>
+                        <!-- end of card -->
+                        
+
+                    </div> <!-- end of col -->
+
+                    <!--Services mid section-->
+                    <div id="services" class="row">
+                        <div class="col-lg-12">
+                          
+                            <h2>Services </h2>
+                        </div> <!-- end of col -->
+                    </div>
+                    <div class ="row">
+                    <!-- Card -->
+                    <div class="card col-lg-12 col-centered jcard" >
+                        <div class="pi1 card-image">
+                            <img class="img-fluid" src={{product.image4.url}} alt="alternative">
+                        </div>
+                        <div class="pb1 card-body">
+                            <h3 class="card-title">{{product.head4|safe}}</h3>
+                            <p>{{product.text4|safe}}</p>
+                                
+                            
+                        </div>
+                        <div class="button-container">
+                            <a class="btn-solid-reg page-scroll" href="#callMe">Know More</a>
+                        </div> <!-- end of button-container -->
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card col-lg-12 col-centered jcard" >
+                        <div class="pi1 card-image">
+                            <img class="img-fluid" src={{product.image5.url}} alt="alternative">
+                        </div>
+                        <div class="pb1 card-body">
+                            <h3 class="card-title">{{product.head5|safe}}</h3>
+                            <p>{{product.text5|safe}}</p>
+                                    
+                            
+                        </div>
+                        <div class="button-container">
+                            <a class="btn-solid-reg page-scroll" href="#callMe">Know More</a>
+                        </div> <!-- end of button-container -->
+                    </div>
+                    <!-- end of card -->
+                
+                </div>
+                   <!--Services mid section ends-->
+
+
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of cards-2 -->
+        <!-- end of services -->
+
+
+
+<!--test gallery-->
+<div class="sheetup">
+<div id="projects" class="container text-center my-3 ">
+    
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Gallery</h2>
+        </div> <!-- end of col -->
+    </div>
+
+    <br>
+
+    <div class="row mx-auto my-auto">
+        <div id="recipeCarousel" class="carousel carousel1 slide w-100" data-ride="carousel">
+            <div class="carousel-inner carousel1-inner w-100" role="listbox" data-toggle="modal" data-target="#exampleModal" >
+                
+                {%for g in gal%}
+                {%if forloop.counter == 1%}
+                <div class="carousel-item active">
+                    <div class="col-md-4">
+                        <div class="card card-body jcard">
+                            <img class="img-fluid ithramathi" src={{g.image.url}} data-target="#carouselExample" data-slide-to={{forloop.counter|sub:1}}>
+                        </div>
+                    </div>
+                </div>
+                {%endif%}
+                {%if forloop.counter > 1%}
+                <div class="carousel-item">
+                    <div class="col-md-4">
+                        <div class="card card-body jcard">
+                            <img class="img-fluid ithramathi" src={{g.image.url}} data-target="#carouselExample" data-slide-to={{forloop.counter|sub:1}}>
+                        </div>
+                    </div>
+                </div>
+                {%endif%}
+                {%endfor%}
+                
+            </div>
+            <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
+                <span class="hexagon"><span class="carousel-control-prev-icon border rounded-circle" style="background-color: #175CA7; border-color:#175CA7;" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span></span>
+            </a>
+            <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon  border  rounded-circle" style="background-color: #175CA7; border-color:#175CA7;" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+<!--gallery close-->
+
+
+
+<!--LIGHTBOX-->
+<!-- Modal markup: https://getbootstrap.com/docs/4.4/components/modal/ -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+        <!-- Carousel markup: https://getbootstrap.com/docs/4.4/components/carousel/ -->
+        <div id="carouselExample" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              {%for g in gal%}
+              {%if forloop.counter == 1%}
+                <div class="carousel-item active">
+                <img class="d-block w-100" src={{g.image.url}}>
+              </div>
+              {%endif%}
+              
+              {%if forloop.counter > 1%}
+              <div class="carousel-item">
+                <img class="d-block w-100" src={{g.image.url}}>
+              </div>
+              {%endif%}
+              {%endfor%}
+
+            </div>
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+  
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!--LIGHTBOX ENDS-->
+
+    <!-- Team -->
+    <div class="basic-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Leadership Team</h2>
+                    
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <br><br>
+            <div class="row">
+                <div class="col-lg-12">
+                    {%for e in employee%}
+                    <!-- Team Member -->
+                    <div class="team-member">
+                        <div class="image-wrapper">
+                            <img class="img-fluid" src={{e.image.url}} alt="alternative">
+                        </div> <!-- end of image-wrapper -->
+                        <p class="p-large">{{e.name}}</p>
+                        
+                        <p class="job-title">{{e.desg}}</p>
+                        
+                    </div> <!-- end of team-member -->
+                    <!-- end of team member -->
+                    {%endfor%}
+                    
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-2 -->
+    <!-- end of team -->
+
+
+
+
+    <!-- Contact -->
+    <div id="contact" class="form-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <div class="section-title">CONTACT</div>
+                        <h2>Get In Touch Using The Form</h2>
+                        <p>You can stop by our office for a cup of coffee and just use the contact form below for any questions and inquiries</p>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="address"><i class="fas fa-map-marker-alt"></i> Suite #175, LR Towers, Palarivattom, Kochi -682025</li>
+                            <li><i class="fas fa-envelope"></i><a href="mailto:office@aria.com">info@zewafeeds.com</a></li>
+                        </ul>
+                        <h3>Follow Zewa On Social Media</h3>
+
+                        {%if link.facebook is not None%}
+                        <span class="fa-stack">
+                            <a href="{{link.facebook}}">
+                                <span class="hexagon"></span>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        {%endif%}
+                        {%if link.twitter is not None%}
+                        <span class="fa-stack">
+                            <a href="{{link.twitter}}">
+                                <span class="hexagon"></span>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        {%endif%}
+                        {%if link.insta is not None%}
+                        <span class="fa-stack">
+                            <a href="{{link.insta}}">
+                                <span class="hexagon"></span>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        {%endif%}
+                        {%if link.linkd is not None%}
+                        <span class="fa-stack">
+                            <a href="{{link.linkd}}">
+                                <span class="hexagon"></span>
+                                <i class="fab fa-linkedin-in fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        {%endif%}
+
+                        <a href="https://www.btkisan.org/" target="_blank" class="link-text"><h5>Visit Biotech - Kisan Project</h5></a>
+                        <a href="https://www.irtc.org.in/" target="_blank" class="link-text"><h5>Our IRTC research colloboration</h5></a>
+
+                                            </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                    
+                    <!-- Contact Form -->
+                    <form id="contactForm" method="POST"  data-toggle="validator" data-focus="false">
+                        <div class="form-group">
+                            <input type="text" class="form-control-input" id="cname" placeholder="Name" required>
+                            
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control-input" id="cemail" placeholder="Email" required>
+                            
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control-textarea" id="cmessage" placeholder="Message" required></textarea>
+
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button id="csubmit" type="submit" class="form-control-submit-button">SUBMIT MESSAGE</button>
+                        </div>
+                        <div class="form-message">
+                            <div id="cmsgSubmit" class="h3 text-center hidden"></div>
+                        </div>
+                    </form>
+                    <!-- end of contact form -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of form-2 -->
+    <!-- end of contact -->
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-container about">
+                        <h4>Our moto:</h4>
+                        <p class="white">
+                            "{{home.moto}}"
+                        </p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
+        <!-- Copyright -->
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="p-small"><a href="">Developed by Abhijith V K </a></p>
+                    </div> <!-- end of col -->
+                </div> <!-- enf of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of copyright --> 
+        <!-- end of copyright -->
+        
+
+
+    
+    <!-- The Modal -->
+    <div class="modal" id="thankyouModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        <li class="far fa-check-circle"></li> Done
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Thank you for getting to us, we will get back to you shortly.
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <a href="/">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    	
+    <!-- Scripts -->
+    <script src={% static "web/js/jquery.min.js" %}></script>
+    <script src={% static "web/js/popper.min.js" %}></script>
+    <script src={% static "web/js/bootstrap.min.js" %}></script>
+    <script src={% static "web/js/jquery.easing.min.js" %}></script>
+    <script src={% static "web/js/swiper.min.js" %}></script>
+    <script src={% static "web/js/jquery.magnific-popup.min.js" %}></script>
+    <script src={% static "web/js/morphext.min.js" %}></script>
+    <script src={% static "web/js/isotope.pkgd.min.js" %}></script>
+    <script src={% static "web/js/validator.min.js" %}></script>
+    <script src={% static "web/js/scripts.js" %}></script>
+
+    <script src="//code.tidio.co/nrxg6t1akfxxkkervxiocyfin04tzn0r.js" async></script>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+
+
+
+
+<!-- Custom 
+
+
+
+<script>
+    jQuery(document).ready(function () {
+    $('#mission').fadeOut();
+    $('#intro').fadeOut();
+    $('#callMe').fadeOut();
+    
+    $('.pressed').click(function(){
+        $('#mission').fadeIn();
+        $('#intro').fadeIn();
+        $('#callMe').fadeIn();
+        
+    })
+
+        $('#hpressed').click(function(){
+        $('#mission').fadeOut();
+        $('#intro').fadeOut();
+        $('#callMe').fadeOut();
+        
+    })
+    
+
+    var lastScrollTop = 0;
+    $(window).scroll(function(event){
+    var st = $(this).scrollTop();
+    if (st > lastScrollTop){
+        if(st>270){
+        $('#mission').slideDown(1500);
+        };
+        if(st>740){
+        $('#intro').slideDown(1500);
+        }; 
+        if(st>5130){
+        $('#callMe').slideDown(1500);
+        }; 
+    } 
+    else {
+        if(st<270){
+        $('#mission').slideUp(1500);
+        };
+        if(st<740){
+        $('#intro').slideUp(1500);
+        }; 
+        if(st<5130){
+        $('#callMe').slideUp(1500);
+        };
+    }
+    lastScrollTop = st;
+    });
+ 
+
+    $(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+
+    console.log(scroll);    
+    
+    
+    
+
+
+});
+    });
+</script>
+
+
+
+
+sripts  -->
+
+<!-- Custom sripts
+ 
+    
+    end -->
+
+
+ <script>
+     jQuery(document).ready(function () {
+        
+       
+
+
+         $("#nav-tab-1").click(function(){
+             if($("#rollingdetail").hasClass('area-3')){
+             $("#rollingdetail").removeClass('area-3')
+             $("#rollingdetail").addClass('area-2')
+            }
+            if($("#rollingdetail").hasClass('area-4')){
+             $("#rollingdetail").removeClass('area-4')
+             $("#rollingdetail").addClass('area-2')
+            }
+         })
+         $("#nav-tab-2").click(function(){
+             if($("#rollingdetail").hasClass('area-2')){
+             $("#rollingdetail").removeClass('area-2')
+             $("#rollingdetail").addClass('area-3')
+            }
+            if($("#rollingdetail").hasClass('area-4')){
+             $("#rollingdetail").removeClass('area-4')
+             $("#rollingdetail").addClass('area-3')
+            }
+         })
+         $("#nav-tab-3").click(function(){
+             if($("#rollingdetail").hasClass('area-2')){
+             $("#rollingdetail").removeClass('area-2')
+             $("#rollingdetail").addClass('area-4')
+            }
+            if($("#rollingdetail").hasClass('area-3')){
+             $("#rollingdetail").removeClass('area-3')
+             $("#rollingdetail").addClass('area-4')
+            }
+         })
+
+$("#1callsubmit").click(function (event) {
+event.preventDefault();
+
+
+// Get form
+var form = {
+    'name' : $('#lname').val(),
+    'email' : $('#lemail').val(),
+    'phone' : $('#lphone').val(),
+    'interest' : $('#lselect').val(),
+}
+var data = $('#callMeForm')[0]
+var token = '{{csrf_token}}';
+// Create an FormData object 
+
+// If you want to add an extra field for the FormData
+
+// disabled the submit button
+$("#1callsubmit").prop("disabled", true);
+
+
+$.ajax({
+        headers: {
+                    "X-CSRFToken": token
+                },
+
+            type: 'post',
+            url: '/addcall',
+            data: JSON.stringify(form),
+            contentType: "application/json; charset=utf-8",
+            traditional: true,
+            success: function (data) {
+                $("#thankyouModal").modal('show')
+                $("#thankyouModal").css("z-index", "1500");
+            }
+        });
+
+});     
+     
+
+$("#csubmit").click(function (event) {
+event.preventDefault();
+
+
+// Get form
+var form = {
+    'name' : $('#cname').val(),
+    'email' : $('#cemail').val(),
+    'message' : $('#cmessage').val(),
+}
+var token = '{{csrf_token}}';
+// Create an FormData object 
+
+console.log(form)
+// If you want to add an extra field for the FormData
+
+// disabled the submit button
+$("#csubmit").prop("disabled", true);
+
+
+$.ajax({
+        headers: {
+                    "X-CSRFToken": token
+                },
+
+            type: 'post',
+            url: '/addcontact',
+            data: JSON.stringify(form),
+            contentType: "application/json; charset=utf-8",
+            traditional: true,
+            success: function (data) {
+                $("#thankyouModal").modal('show')
+                $("#thankyouModal").css("z-index", "1500");
+            }
+        });
+
+});     
+     
+
+
+function sameheight(main,sub){
+cool = $(main).find(sub)
+ar=[]
+for(let i=0;i<$(cool).length;i++){
+    ar.push($(cool[i]).height())
+}
+Math.max.apply(Math,ar); 
+for(let i=0;i<$(cool).length;i++){
+    $(cool[i]).height(ar[0])
+}
+
+}
+
+
+function samepos(main,sub){
+cool = $(main).find(sub)
+ar=[]
+for(let i=0;i<$(cool).length;i++){
+    ar.push($(cool[i]).position().top)
+
+}
+Math.max.apply(Math,ar); 
+console.log(ar)
+for(let i=0;i<$(cool).length;i++){
+    $(cool[i]).position({top: ar[0]})
+}
+
+}
+
+sameheight(".cards-2","img");
+sameheight(".cards-2","div.pb");
+sameheight(".cards-2","div.pb1");
+sameheight(".basic-2","img");
+
+
+
+})
+     
+
+ </script>   
+
+
+<script>
+$('#recipeCarousel').carousel({
+  interval: 10000
+})
+
+$('.carousel1 .carousel-item').each(function(){
+    var minPerSlide = 3;
+    var next = $(this).next();
+    if (!next.length) {
+    next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+    
+    for (var i=0;i<minPerSlide;i++) {
+        next=next.next();
+        if (!next.length) {
+        	next = $(this).siblings(':first');
+      	}
+        
+        next.children(':first-child').clone().appendTo($(this));
+      }
+});
+</script>
+
+
+</body>
+</html>

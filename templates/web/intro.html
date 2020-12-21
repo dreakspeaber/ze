@@ -1,0 +1,404 @@
+{%extends 'web/dbase.html'%} {%load static%} {%block headers%} {% load mathfilters %}
+
+<!-- Favicon -->
+{% endblock %}
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
+    
+    <link type="text/css" rel="stylesheet" href={% static "web/css/bootstrap.css" %} />
+    <link type="text/css" rel="stylesheet" href={% static "web/css/fontawesome-all.css" %} />
+    <link type="text/css" rel="stylesheet" href={% static "web/css/swiper.css" %}>
+    <link type="text/css" rel="stylesheet" href={% static "web/css/magnific-popup.css" %}>
+    <link type="text/css" rel="stylesheet" href={% static "web/css/styles.css" %}>
+
+</head>
+
+<body>
+
+    {%block body%}
+
+
+    <!-- Page Inner Start -->
+    <!--================================-->
+    <div class="page-inner">
+        <!-- Main Wrapper -->
+        <div id="main-wrapper">
+            <!--================================-->
+            <!-- Breadcrumb Start -->
+            <!--================================-->
+            <div class="pageheader pd-t-25 pd-b-35">
+                <div class="pd-t-5 pd-b-5">
+                    <h1 class="pd-0 mg-0 tx-20">Front-end</h1>
+                </div>
+
+            </div>
+            <!--/ Breadcrumb End -->
+            <!-- Action Table Start -->
+            <!--================================-->
+            <div class="col-md-12 col-lg-12">
+              
+                                    <!--Services mid section-->
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h2>Logo and Trademark</h2>
+                                        </div> <!-- end of col -->
+                                    </div>
+                                    <div class ="row">
+                                    <!-- Card -->
+                                    <div class="card col-lg-12 col-centered jcard" >
+                                        <form id="logo" data-toggle="validator" data-focus="false">
+                                            <div class="form-group">
+                                              <label for="exampleFormControlFile1">Logo</label>
+                                              <input type="file" name="image" class="form-control-file" id="logop">
+                                              <button id="lsubmit" style="background-color:#000000	; border-color: white;" class="btn btn-custom-primary">Update</button>
+                                            </div>
+                                          </form>
+                                    </div>
+                                    <!-- end of card -->
+                                    <!-- Card -->
+                                    <div class="card col-lg-12 col-centered jcard" >
+                                        <form id="tm" data-toggle="validator" data-focus="false">
+                                            <div class="form-group">
+                                                <label for="exampleFormControlFile1">Trademark</label>
+                                                <input type="file" class="form-control-file" name="image" id="tmp">
+                                                <button id="tsubmit" style="background-color:#000000	; border-color: white;" class="btn btn-custom-primary">Update</button>
+                                            </div>
+                                            </form>
+                                    </div>
+                                    <!-- end of card -->
+                
+                                    <!-- Card -->
+                                    
+                                </div>
+                                   <!--Services mid section ends-->
+                
+                
+
+                                    <!--Home-->
+                                    <br><br><br>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h2>Home</h2>
+                                        </div> <!-- end of col -->
+                                    </div>
+                                    <div class ="row">
+                                    <!-- Card -->
+                                    <div class="card col-lg-12 col-centered jcard" >
+                                        <form id="home" data-toggle="validator" data-focus="false">
+                                            <div class="form-group">
+                                              <label for="exampleFormControlFile1">Main Caption</label>
+                                              {% render_field hform.caption id="hcaption" class="form-control" %}
+                                              <input type="text"  name="caption" id="hcaption" class="form-control" >
+                                              <label for="exampleFormControlFile1">Moto</label>
+                                              <input type="text" name="moto" id="hmoto" class="form-control" >
+                                              <label for="exampleFormControlFile1">Mission</label>
+                                              <textarea type="textArea" rows="4" id="hmission" name="mission" class="form-control" ></textarea>
+                                              <label for="exampleFormControlFile1">Image</label>
+                                              <input type="file" class="form-control-file" name="image" id="himage"> 
+                                              <button id="hsubmit" style="background-color:#000000	; border-color: white;" class="btn btn-custom-primary">Update</button>
+                                            </div>
+                                          </form>
+                                    </div>
+                                    <!-- end of card -->
+                                   
+                                    <!-- Card -->
+                                    
+                                </div>
+                                   <!--Services mid section ends-->
+
+
+                                
+                        <!--Home-->
+                        <br><br><br>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h2>Intro</h2>
+                            </div> <!-- end of col -->
+                        </div>
+                        <div class ="row">
+                        <!-- Card -->
+                        <div class="card col-lg-12 col-centered jcard" >
+                            <form id="intro" data-toggle="validator" data-focus="false">
+                                <div class="form-group">
+                                    <label for="exampleFormControlFile1">Caption</label>
+                                    <input type="text"  name="caption" id="icaption" class="form-control" >
+                                    <label for="exampleFormControlFile1">Text1</label>
+                                    <textarea type="textArea" rows="4" id="itext1" name="text1" class="form-control" ></textarea>
+                                    <label for="exampleFormControlFile1">Text2</label>
+                                    <textarea type="textArea" rows="4" id="itext2" name="text2" class="form-control" ></textarea>
+                                    <label for="exampleFormControlFile1">head3</label>
+                                    <input type="text" name="head3" id="#head3" class="form-control" >
+                                    <label for="exampleFormControlFile1">Text3</label>
+                                    <textarea type="textArea" rows="4" id="itext3" name="text3" class="form-control" ></textarea>
+                                    <label for="exampleFormControlFile1">head4</label>
+                                    <input type="text" name="head4" id="#head4" class="form-control" >
+                                    <label for="exampleFormControlFile1">Text4</label>
+                                    <textarea type="textArea" rows="4" id="itext4" name="text4" class="form-control" ></textarea>
+                                    <label for="exampleFormControlFile1">head5</label>
+                                    <input type="text" name="head5" id="#head5" class="form-control" >
+                                    <label for="exampleFormControlFile1">Text5</label>
+                                    <textarea type="textArea" rows="4" id="itext5" name="text5" class="form-control" ></textarea>
+                                    <label for="exampleFormControlFile1">Text6</label>
+                                    <textarea type="textArea" rows="4" id="itext6" name="text6" class="form-control" ></textarea>
+                                    <label for="exampleFormControlFile1">Image</label>
+                                    <input type="file" class="form-control-file" name="image" id="iimage"> 
+                                    <button id="isubmit" style="background-color:#000000	; border-color: white;" class="btn btn-custom-primary">Update</button>
+                                </div>
+                                </form>
+                        </div>
+                        <!-- end of card -->
+                        
+                        <!-- Card -->
+                        
+                    </div>
+                        <!--Services mid section ends-->
+    
+                
+
+            </div>
+            <!--/ Action Table End -->
+
+            <div class="row row-xs clearfix">
+
+            </div>
+        </div>
+        <!--/ Main Wrapper End -->
+    </div>
+    <!--/ Page Inner End -->
+    <!--================================-->
+    <!-- Page Footer Start -->
+    <!--================================-->
+
+    <footer class="page-footer">
+        <div class="pd-t-4 pd-b-0 pd-x-20">
+            <div class="tx-10 tx-uppercase">
+                <p class="pd-y-10 mb-0">Copyright&copy; 2020 | All rights reserved. | Developed By <a href="" target="_blank">Abhijith V K</a></p>
+            </div>
+        </div>
+    </footer>
+    <!--/ Page Footer End -->
+    </div>
+    <!--/ Page Content End -->
+    </div>
+        
+    <!-- The Modal -->
+    <div class="modal" id="thankyouModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        <li class="far fa-check-circle"></li> Done
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Have been successfully updated.
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <a href="/dfront">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--/ Page Container End -->
+    <!--================================-->
+    <!-- Scroll To Top Start-->
+    <!--================================-->
+    <a href="" data-click="scroll-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
+    <!--/ Scroll To Top End -->
+    <!--================================-->
+
+    <!--================================-->
+    <!-- Footer Script -->
+    <!--================================-->
+    {%endblock%} {%block script%}
+
+
+        <!-- Scripts -->
+        <script src={% static "web/js/jquery.min.js" %}></script>
+        <script src={% static "web/js/popper.min.js" %}></script>
+        <script src={% static "web/js/bootstrap.min.js" %}></script>
+        <script src={% static "web/js/jquery.easing.min.js" %}></script>
+        <script src={% static "web/js/swiper.min.js" %}></script>
+        <script src={% static "web/js/jquery.magnific-popup.min.js" %}></script>
+        <script src={% static "web/js/morphext.min.js" %}></script>
+        <script src={% static "web/js/isotope.pkgd.min.js" %}></script>
+        <script src={% static "web/js/validator.min.js" %}></script>
+        <script src={% static "web/js/scripts.js" %}></script>
+    
+        <script src="//code.tidio.co/nrxg6t1akfxxkkervxiocyfin04tzn0r.js" async></script>
+        <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    
+    
+    
+ <script>
+    jQuery(document).ready(function () {
+
+        var token = '{{csrf_token}}';
+
+
+/* POST DATA */
+
+$("#lsubmit").click(function (event) {
+    event.preventDefault();
+
+    var form = $('#logo')[0];
+    var data = new FormData(form);
+    console.log(form)
+    console.log(data)
+    $.ajax({
+                headers: {
+                    "X-CSRFToken": token
+                },
+                type: "POST",
+                enctype: 'multipart/form-data',
+                url: "/addlogo",
+                data: data,
+                processData: false,
+                contentType: false,
+                cache: false,
+                timeout: 600000,
+                async: true,
+
+                success: function(data) {
+                    $("#result").text(data);
+                    console.log("SUCCESS : ", data);
+                    $("#thankyouModal").modal('show')
+                    $("#thankyouModal").css("z-index", "1500");
+                },
+                error: function(e) {
+                    $("#result").text(e.responseText);
+                    console.log("ERROR : ", e);
+                    }
+
+    })        
+
+});
+
+
+/* tm */
+$("#tsubmit").click(function (event) {
+    event.preventDefault();
+
+    var form = $('#tm')[0];
+    var data = new FormData(form);
+    console.log(form)
+    console.log(data)
+       $.ajax({
+                    headers: {
+                        "X-CSRFToken": token
+                    },
+                    type: "POST",
+                    enctype: 'multipart/form-data',
+                    url: "/addtm",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    timeout: 600000,
+                    async: true,
+
+                    success: function(data) {
+                        $("#result").text(data);
+                        console.log("SUCCESS : ", data);
+                        $("#thankyouModal").modal('show')
+                        $("#thankyouModal").css("z-index", "1500");
+                    },
+                    error: function(e) {
+                        $("#result").text(e.responseText);
+                        console.log("ERROR : ", e);
+                    }
+
+       })        
+
+});    
+
+/* HOME */
+$("#hsubmit").click(function (event) {
+    event.preventDefault();
+
+    var fileInput = $.trim($("#himage").val());
+    if (fileInput.length > 0) {   
+        var form = $('#home')[0];
+        var data = new FormData(form);
+
+    }
+    else {
+        var data = new FormData();
+        data.append('caption',$('#hcaption').val());
+        data.append('moto',$('#hmoto').val());
+        data.append('mission',$('#hmission').val());
+    };
+
+       $.ajax({
+                    headers: {
+                        "X-CSRFToken": token
+                    },
+                    type: "POST",
+                    enctype: 'multipart/form-data',
+                    url: "/addhome",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    timeout: 600000,
+                    async: true,
+
+                    success: function(data) {
+                        $("#result").text(data);
+                        console.log("SUCCESS : ", data);
+                        $("#thankyouModal").modal('show')
+                        $("#thankyouModal").css("z-index", "1500");
+                    },
+                    error: function(e) {
+                        $("#result").text(e.responseText);
+                        console.log("ERROR : ", e);
+                    }
+
+       })        
+
+});    
+
+
+
+
+
+$('#hcaption').val("{{home.caption}}");
+$('#hmoto').val("{{home.moto}}");
+$('#hmission').val("{{home.mission}}");
+
+$('#icaption').val("{{intro.caption}}");
+$('#itext1').val("{{intro.text1}}");
+$('#itext2').val("{{intro.text2}}");
+$('#head3').val("{{intro.head3}}");
+$('#itext3').val("{{intro.text3}}");
+$('#head4').val("{{intro.head4}}");
+$('#itext4').val("{{intro.text4}}");
+$('#head5').val("{{intro.head5}}");
+$('#itext5').val("{{intro.text5}}");
+$('#itext6').val("{{intro.text6}}");
+
+
+
+/* LOAD DATA */
+
+
+
+    
+})
+    
+
+</script>
+    
+
+</body>
+
+{% endblock %}

@@ -1,0 +1,264 @@
+{%extends 'web/dbase.html'%} {%load static%} {%block headers%} {% load mathfilters %} {% load widget_tweaks %}
+
+<!-- Favicon -->
+{% endblock %}
+
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
+    
+    <link type="text/css" rel="stylesheet" href={% static "web/css/bootstrap.css" %} />
+    <link type="text/css" rel="stylesheet" href={% static "web/css/fontawesome-all.css" %} />
+    <link type="text/css" rel="stylesheet" href={% static "web/css/swiper.css" %}>
+    <link type="text/css" rel="stylesheet" href={% static "web/css/magnific-popup.css" %}>
+    <link type="text/css" rel="stylesheet" href={% static "web/css/styles.css" %}>
+    
+
+    <!-- CSS only -->
+
+
+<style>
+.stretch { 
+    width:100%;
+}
+</style>
+
+
+</head>
+
+<body>
+
+    {%block body%}
+
+
+    <!-- Page Inner Start -->
+    <!--================================-->
+    <div class="page-inner">
+        <!-- Main Wrapper -->
+        <div id="main-wrapper">
+            <!--================================-->
+            <!-- Breadcrumb Start -->
+            <!--================================-->
+            <!--/ Breadcrumb End -->
+            <!-- Action Table Start -->
+            <!--================================-->
+            <div class="col-md-12 col-lg-12">
+              
+                                                                <!--method-->
+                             <br><br><br>
+                             <div class="row">
+                                 <div class="col-lg-12">
+                                     <h2>Team</h2>
+                                 </div> <!-- end of col -->
+                             </div>
+                             <div class ="row">
+                             <!-- Card -->
+                             <div class="card col-lg-12 col-centered jcard" >
+                                 <form id="team" data-toggle="validator" data-focus="false">
+                                     <div class="form-group">
+                                         <label for="exampleFormControlFile1">Name</label>
+                                         {% render_field mform.name class="form-control" %}
+                                         <label for="exampleFormControlFile1">Designation</label>
+                                         {% render_field mform.desg  class="form-control" rows="7" %}
+                                         <label for="exampleFormControlFile1">Qualification</label>
+                                         {% render_field mform.quali  class="form-control" rows="7" %}
+                                         <label for="exampleFormControlFile1">image</label>
+                                         {% render_field mform.image  class="form-control-file" %}
+                                         <label for="exampleFormControlFile1">twitter</label>
+                                         {% render_field mform.twitter  class="form-control" %}
+                                         <label for="exampleFormControlFile1">facebook</label>
+                                         {% render_field mform.facebook  class="form-control" %}
+                                         <button id="msubmit" style="background-color:#000000	; border-color: white;" class="btn btn-custom-primary">Update</button>
+                                     </div>
+                                     </form>
+                             </div>
+                             <!-- end of card -->
+                             
+                             <!-- Card -->
+                             
+                         </div>
+                             <!--Services mid section ends-->
+    
+                
+
+
+            </div>
+            <!--/ Action Table End -->
+
+            <div class="row row-xs clearfix">
+
+            </div>
+
+            <!--Services mid section ends-->
+
+                
+            <div class="row package-grids mt-5" data-toggle="modal" data-target="#exampleModal">
+                {%for g in teams%}
+                <div class="col-md-4 pricing ">
+                    <div class="price-top ">
+                            
+                            <img src={{g.image.url}} alt=" " class="img-fluid " style="height: 200px; width: 100% "  />
+                            
+                            
+                            <div class="price-bottom p-4 ">
+                                <a href= "{% url 'dteam' id=g.id %}">
+                                <button   style="display: block; margin: 0 auto;" ><i
+                                    class="fa fa-edit"></i></button></a>
+                                <button class="postmagic"  style="display: block; margin: 0 auto;" data-id={{g.id}} data-link='/deleteteam' data-success='Data has been deleted' data-failure='Cannot delete now, please try again later'><i
+                                    class="fa fa-trash"></i></button>
+                            </div>
+    
+                    </div>
+                    
+                </div>
+                {%endfor%}
+    
+                
+        </div>
+
+
+        </div>
+        <!--/ Main Wrapper End -->
+
+        
+    
+
+
+
+    </div>
+
+    <!--/ Page Inner End -->
+    <!--================================-->
+    <!-- Page Footer Start -->
+    <!--================================-->
+
+    <footer class="page-footer">
+        <div class="pd-t-4 pd-b-0 pd-x-20">
+            <div class="tx-10 tx-uppercase">
+                <p class="pd-y-10 mb-0">Copyright&copy; 2020 | All rights reserved. | Developed By <a href="" target="_blank">Abhijith V K</a></p>
+            </div>
+        </div>
+    </footer>
+    <!--/ Page Footer End -->
+    </div>
+    <!--/ Page Content End -->
+    </div>
+        
+    <!-- The Modal -->
+    <div class="modal" id="thankyouModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        <li class="far fa-check-circle"></li> Done
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Have been successfully updated.
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button id="modalbut" type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--/ Page Container End -->
+    <!--================================-->
+    <!-- Scroll To Top Start-->
+    <!--================================-->
+    <a href="" data-click="scroll-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
+    <!--/ Scroll To Top End -->
+    <!--================================-->
+
+    <!--================================-->
+    <!-- Footer Script -->
+    <!--================================-->
+    {%endblock%} {%block script%}
+
+
+    
+
+    
+    
+    
+ <script>
+    jQuery(document).ready(function () {
+
+        var token = '{{csrf_token}}';
+
+
+/* POST DATA */
+
+
+/* HOME */
+$("#msubmit").click(function (event) {
+
+
+    var token = '{{csrf_token}}';
+        $('#modalbut').click(function(){
+            location.reload(); 
+        })
+
+
+
+    event.preventDefault();
+    var form = $('#team')[0];
+    var data = new FormData(form);
+    var n = "{{ tid }}"
+    console.log(n)
+    var url = '/' + n.toString() + '/addteam' 
+    console.log(url)
+            $.ajax({
+                    headers: {
+                        "X-CSRFToken": token
+                    },
+                    type: "POST",
+                    enctype: 'multipart/form-data',
+                    url: url,
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    timeout: 600000,
+                    async: true,
+
+                    success: function(data) {
+                        $("#result").text(data);
+                        console.log("SUCCESS : ", data);
+                        $("#thankyouModal").modal('show')
+                        $("#thankyouModal").css("z-index", "1500");
+                    },
+                    error: function(e) {
+                        $("#result").text(e.responseText);
+                        console.log("ERROR : ", e);
+                    }
+
+       })        
+
+});    
+
+
+
+
+
+/* LOAD DATA */
+
+
+
+    
+})
+    
+
+</script>
+    
+
+</body>
+
+{% endblock %}

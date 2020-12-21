@@ -1,0 +1,646 @@
+{%extends 'web/dbase.html'%} {%load static%} {%block headers%} {% load mathfilters %} {% load widget_tweaks %}
+
+<!-- Favicon -->
+{% endblock %}
+
+
+<style>
+.stretch { 
+    width:100%;
+}
+</style>
+
+
+</head>
+
+<body>
+
+    {%block body%}
+
+
+    <!-- Page Inner Start -->
+    <!--================================-->
+    <div class="page-inner">
+        <!-- Main Wrapper -->
+        <div id="main-wrapper">
+            <!--================================-->
+            <!-- Breadcrumb Start -->
+            <!--================================-->
+            <div class="pageheader pd-t-25 pd-b-35">
+                <div class="pd-t-5 pd-b-5">
+                    <h1 class="pd-0 mg-0 tx-20">Front-end</h1>
+                </div>
+
+            </div>
+            <!--/ Breadcrumb End -->
+            <!-- Action Table Start -->
+            <!--================================-->
+            <div class="col-md-12 col-lg-12">
+              
+                                    <!--Services mid section-->
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h2>Logo and Trademark</h2>
+                                        </div> <!-- end of col -->
+                                    </div>
+                                    <div class ="row">
+                                    <!-- Card -->
+                                    <div class="card col-lg-12 col-centered jcard" >
+                                        <form id="logo" data-toggle="validator" data-focus="false">
+                                            <div class="form-group">
+                                              <label for="exampleFormControlFile1">Logo</label>
+                                              <input type="file" name="image" class="form-control-file" id="logop">
+                                              <button id="lsubmit" style="background-color:#000000	; border-color: white;" class="btn btn-custom-primary">Update</button>
+                                            </div>
+                                          </form>
+                                    </div>
+                                    <!-- end of card -->
+                                    <!-- Card -->
+                                    <div class="card col-lg-12 col-centered jcard" >
+                                        <form id="tm" data-toggle="validator" data-focus="false">
+                                            <div class="form-group">
+                                                <label for="exampleFormControlFile1">Trademark</label>
+                                                <input type="file" class="form-control-file" name="image" id="tmp">
+                                                <button id="tsubmit" style="background-color:#000000	; border-color: white;" class="btn btn-custom-primary">Update</button>
+                                            </div>
+                                            </form>
+                                    </div>
+                                    <!-- end of card -->
+                
+                                    <!-- Card -->
+                                    
+                                </div>
+                                   <!--Services mid section ends-->
+                
+                
+
+                                    <!--Home-->
+                                    <br><br><br>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h2>Home</h2>
+                                        </div> <!-- end of col -->
+                                    </div>
+                                    <div class ="row">
+                                    <!-- Card -->
+                                    <div class="card col-lg-12 col-centered jcard" >
+                                        <form id="home" data-toggle="validator" data-focus="false">
+                                            <div class="form-group">
+                                              <label for="exampleFormControlFile1">Main Caption</label>
+                                              {% render_field hform.caption id="hcaption" class="form-control" %}
+                                              <br><label for="exampleFormControlFile1">Moto</label>
+                                              {% render_field hform.moto id="hmoto" class="form-control" %}
+                                              <br><label for="exampleFormControlFile1">Mission</label>
+                                              {% render_field hform.mission id="hmission" class="form-control" %}
+                                              <br><label for="exampleFormControlFile1">Image</label>
+                                              {% render_field hform.image id="himage" class="form-control-file" %}
+                                              <br><button id="hsubmit" style="background-color:#000000	; border-color: white;" class="btn btn-custom-primary">Update</button>
+                                            </div>
+                                          </form>
+                                    </div>
+                                    <!-- end of card -->
+                                   
+                                    <!-- Card -->
+                                    
+                                </div>
+                                   <!--Services mid section ends-->
+
+
+                                
+                        <!--intro-->
+                        <br><br><br>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h2>Intro</h2>
+                            </div> <!-- end of col -->
+                        </div>
+                        <div class ="row">
+                        <!-- Card -->
+                        <div class="card col-lg-12 col-centered jcard" >
+                            <form id="intro" data-toggle="validator" data-focus="false">
+                                <div class="form-group">
+                                    <label for="exampleFormControlFile1">Caption</label>
+                                    {% render_field iform.caption  class="form-control" %}
+                                    <label for="exampleFormControlFile1">Text1</label>
+                                    {% render_field iform.text1  class="form-control" rows="7" %}
+                                    <label for="exampleFormControlFile1">Text2</label>
+                                    {% render_field iform.text2  class="form-control" rows="7" %}
+                                    <label for="exampleFormControlFile1">head3</label>
+                                    {% render_field iform.head3  class="form-control" %}
+                                    <label for="exampleFormControlFile1">Text3</label>
+                                    {% render_field iform.text3  class="form-control" rows="7" %}
+                                    <label for="exampleFormControlFile1">head4</label>
+                                    {% render_field iform.head4  class="form-control" %}
+                                    <label for="exampleFormControlFile1">Text4</label>
+                                    {% render_field iform.text4  class="form-control" rows="7" %}
+                                    <label for="exampleFormControlFile1">head5</label>
+                                    {% render_field iform.head5  class="form-control" %}
+                                    <label for="exampleFormControlFile1">Text5</label>
+                                    {% render_field iform.text5  class="form-control" rows="7" %}
+                                    <label for="exampleFormControlFile1">Text6</label>
+                                    {% render_field iform.text6  class="form-control" rows="7" %}
+                                    <label for="exampleFormControlFile1">Image</label>
+                                    {% render_field iform.image  class="form-control-file" %}
+                                    <button id="isubmit" style="background-color:#000000	; border-color: white;" class="btn btn-custom-primary">Update</button>
+                                </div>
+                                </form>
+                        </div>
+                        <!-- end of card -->
+                        
+                        <!-- Card -->
+                        
+                    </div>
+                        <!--Services mid section ends-->
+
+                             <!--method-->
+                             <br><br><br>
+                             <div class="row">
+                                 <div class="col-lg-12">
+                                     <h2>Methodology</h2>
+                                 </div> <!-- end of col -->
+                             </div>
+                             <div class ="row">
+                             <!-- Card -->
+                             <div class="card col-lg-12 col-centered jcard" >
+                                 <form id="method" data-toggle="validator" data-focus="false">
+                                     <div class="form-group">
+                                        <br> <label for="exampleFormControlFile1">Caption</label>
+                                         {% render_field mform.caption  class="form-control" %}
+                                         <br><label for="exampleFormControlFile1">Image1</label>
+                                         {% render_field mform.image1  class="form-control-file" %}
+                                         <br><label for="exampleFormControlFile1">Text1</label>
+                                         {% render_field mform.text1  class="form-control" rows="7" %}
+                                         <br><label for="exampleFormControlFile1">Text2</label>
+                                         {% render_field mform.text2  class="form-control" rows="7" %}
+                                         <br><label for="exampleFormControlFile1">head3</label>
+                                         {% render_field mform.head3  class="form-control" %}
+                                         <br><label for="exampleFormControlFile1">Text3</label>
+                                         {% render_field mform.text3  class="form-control" rows="7" %}
+                                         <br><label for="exampleFormControlFile1">Image3</label>
+                                         {% render_field mform.image3  class="form-control-file" %}
+                                         <br><label for="exampleFormControlFile1">head4</label>
+                                         {% render_field mform.head4  class="form-control" %}
+                                         <br><label for="exampleFormControlFile1">Text4</label>
+                                         {% render_field mform.text4  class="form-control" rows="7" %}
+                                         <br><label for="exampleFormControlFile1">Image4</label>
+                                         {% render_field mform.image4  class="form-control-file" %}
+                                         <br><label for="exampleFormControlFile1">head5</label>
+                                         {% render_field mform.head5  class="form-control" %}
+                                         <br><label for="exampleFormControlFile1">Text5</label>
+                                         {% render_field mform.text5  class="form-control" rows="7" %}
+                                         <br><label for="exampleFormControlFile1">Image5</label>
+                                         {% render_field mform.image5  class="form-control-file" %}
+                                         <button id="msubmit" style="background-color:#000000	; border-color: white;" class="btn btn-custom-primary">Update</button>
+                                     </div>
+                                     </form>
+                             </div>
+                             <!-- end of card -->
+                             
+                             <!-- Card -->
+                             
+                         </div>
+                             <!--Services mid section ends-->
+    
+                
+                                                     <!--Services mid section ends-->
+
+                             <!--method-->
+                             <br><br><br>
+                             <div class="row">
+                                 <div class="col-lg-12">
+                                     <h2>Product</h2>
+                                 </div> <!-- end of col -->
+                             </div>
+                             <div class ="row">
+                             <!-- Card -->
+                             <div class="card col-lg-12 col-centered jcard" >
+                                 <form id="product" data-toggle="validator" data-focus="false">
+                                     <div class="form-group">
+                                        <br><label for="exampleFormControlFile1">head1</label>
+                                         {% render_field pform.head1  class="form-control" %}
+                                         <br><label for="exampleFormControlFile1">Text1</label>
+                                         {% render_field pform.text1  class="form-control" rows="2" %}
+                                         <br><label for="exampleFormControlFile1">Image1</label>
+                                         {% render_field pform.image1  class="form-control-file" %}
+                                         <br><label for="exampleFormControlFile1">head2</label>
+                                         {% render_field pform.head2  class="form-control" %}
+                                         <br><label for="exampleFormControlFile1">Text2</label>
+                                         {% render_field pform.text2  class="form-control" rows="2" %}
+                                         <br><label for="exampleFormControlFile1">Image2</label>
+                                         {% render_field pform.image2  class="form-control-file" %}
+
+                                        <br><label for="exampleFormControlFile1">head3</label>
+                                         {% render_field pform.head3  class="form-control" %}
+                                         <br><label for="exampleFormControlFile1">Text3</label>
+                                         {% render_field pform.text3  class="form-control" rows="2" %}
+                                         <br><label for="exampleFormControlFile1">Image3</label>
+                                         {% render_field pform.image3  class="form-control-file" %}
+                                         <br><label for="exampleFormControlFile1">head4</label>
+                                         {% render_field pform.head4  class="form-control" %}
+                                         <br><label for="exampleFormControlFile1">Text4</label>
+                                         {% render_field pform.text4  class="form-control" rows="2" %}
+                                         <br><label for="exampleFormControlFile1">Image4</label>
+                                         {% render_field pform.image4  class="form-control-file" %}
+                                         <br><label for="exampleFormControlFile1">head5</label>
+                                         {% render_field pform.head5  class="form-control" %}
+                                         <br><label for="exampleFormControlFile1">Text5</label>
+                                         {% render_field pform.text5  class="form-control" rows="2" %}
+                                         <br><label for="exampleFormControlFile1">Image1</label>
+                                         {% render_field pform.image5  class="form-control-file" %}
+                                         
+                                         <button id="psubmit" style="background-color:#000000	; border-color: white;" class="btn btn-custom-primary">Update</button>
+                                     </div>
+                                     </form>
+                             </div>
+                             <!-- end of card -->
+                             
+                             <!-- Card -->
+                             
+                         </div>
+                             <!--Services mid section ends-->
+    
+
+                             
+                             <!--method-->
+                             <br><br><br>
+                             <div class="row">
+                                 <div class="col-lg-12">
+                                     <h2>Links and Gallery height</h2>
+                                 </div> <!-- end of col -->
+                             </div>
+                             <div class ="row">
+                             <!-- Card -->
+                             <div class="card col-lg-12 col-centered jcard" >
+                                 <form id="link" data-toggle="validator" data-focus="false">
+                                     <div class="form-group">
+                                        <br><label for="exampleFormControlFile1">Facebook</label>
+                                         {% render_field lform.facebook  class="form-control" %}
+                                         <br><label for="exampleFormControlFile1">Twitter</label>
+                                         {% render_field lform.twitter  class="form-control" %}
+                                         <br><label for="exampleFormControlFile1">Insta</label>
+                                         {% render_field lform.insta  class="form-control" %}
+                                         <br><label for="exampleFormControlFile1">LinkedIn</label>
+                                         {% render_field lform.linkd  class="form-control" %}
+
+                                         <button id="linksubmit" style="background-color:#000000	; border-color: white;" class="btn btn-custom-primary">Update</button>
+                                     </div>
+                                     </form>
+                             </div>
+                             <!-- end of card -->
+                             
+                             <!-- Card -->
+                             
+                         </div>
+                             <!--Services mid section ends-->
+
+
+            </div>
+            <!--/ Action Table End -->
+
+            <div class="row row-xs clearfix">
+
+            </div>
+        </div>
+        <!--/ Main Wrapper End -->
+    </div>
+    <!--/ Page Inner End -->
+    <!--================================-->
+    <!-- Page Footer Start -->
+    <!--================================-->
+
+    <footer class="page-footer">
+        <div class="pd-t-4 pd-b-0 pd-x-20">
+            <div class="tx-10 tx-uppercase">
+                <p class="pd-y-10 mb-0">Copyright&copy; 2020 | All rights reserved. | Developed By <a href="" target="_blank">Abhijith V K</a></p>
+            </div>
+        </div>
+    </footer>
+    <!--/ Page Footer End -->
+    </div>
+    <!--/ Page Content End -->
+    </div>
+        
+    <!-- The Modal -->
+    <div class="modal" id="thankyouModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        <li class="far fa-check-circle"></li> Done
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Have been successfully updated.
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    
+                    <button type="button" id="modalbut" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--/ Page Container End -->
+    <!--================================-->
+    <!-- Scroll To Top Start-->
+    <!--================================-->
+    <a href="" data-click="scroll-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
+    <!--/ Scroll To Top End -->
+    <!--================================-->
+
+    <!--================================-->
+    <!-- Footer Script -->
+    <!--================================-->
+    {%endblock%} {%block script%}
+
+
+    
+    
+ <script>
+    jQuery(document).ready(function () {
+
+        $('#modalbut').click(function(){
+            location.reload(); 
+        })
+        var token = '{{csrf_token}}';
+
+
+/* POST DATA */
+
+$("#lsubmit").click(function (event) {
+    event.preventDefault();
+
+    var form = $('#logo')[0];
+    var data = new FormData(form);
+    console.log(form)
+    console.log(data)
+    $.ajax({
+                headers: {
+                    "X-CSRFToken": token
+                },
+                type: "POST",
+                enctype: 'multipart/form-data',
+                url: "/addlogo",
+                data: data,
+                processData: false,
+                contentType: false,
+                cache: false,
+                timeout: 600000,
+                async: true,
+
+                success: function(data) {
+                    $("#result").text(data);
+                    console.log("SUCCESS : ", data);
+                    $("#thankyouModal").modal('show')
+                    $("#thankyouModal").css("z-index", "1500");
+                },
+                error: function(e) {
+                    $("#result").text(e.responseText);
+                    console.log("ERROR : ", e);
+                    }
+
+    })        
+
+});
+
+
+/* tm */
+$("#tsubmit").click(function (event) {
+    event.preventDefault();
+
+    var form = $('#tm')[0];
+    var data = new FormData(form);
+    console.log(form)
+    console.log(data)
+       $.ajax({
+                    headers: {
+                        "X-CSRFToken": token
+                    },
+                    type: "POST",
+                    enctype: 'multipart/form-data',
+                    url: "/addtm",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    timeout: 600000,
+                    async: true,
+
+                    success: function(data) {
+                        $("#result").text(data);
+                        console.log("SUCCESS : ", data);
+                        $("#thankyouModal").modal('show')
+                        $("#thankyouModal").css("z-index", "1500");
+                    },
+                    error: function(e) {
+                        $("#result").text(e.responseText);
+                        console.log("ERROR : ", e);
+                    }
+
+       })        
+
+});    
+
+/* HOME */
+$("#hsubmit").click(function (event) {
+    event.preventDefault();
+    var form = $('#home')[0];
+    var data = new FormData(form);
+
+            $.ajax({
+                    headers: {
+                        "X-CSRFToken": token
+                    },
+                    type: "POST",
+                    enctype: 'multipart/form-data',
+                    url: "/addhome",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    timeout: 600000,
+                    async: true,
+
+                    success: function(data) {
+                        $("#result").text(data);
+                        console.log("SUCCESS : ", data);
+                        $("#thankyouModal").modal('show')
+                        $("#thankyouModal").css("z-index", "1500");
+                    },
+                    error: function(e) {
+                        $("#result").text(e.responseText);
+                        console.log("ERROR : ", e);
+                    }
+
+       })        
+
+});    
+
+
+/* intro */
+$("#isubmit").click(function (event) {
+    event.preventDefault();
+    var form = $('#intro')[0];
+    var data = new FormData(form);
+
+            $.ajax({
+                    headers: {
+                        "X-CSRFToken": token
+                    },
+                    type: "POST",
+                    enctype: 'multipart/form-data',
+                    url: "/addintro",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    timeout: 600000,
+                    async: true,
+
+                    success: function(data) {
+                        $("#result").text(data);
+                        console.log("SUCCESS : ", data);
+                        $("#thankyouModal").modal('show')
+                        $("#thankyouModal").css("z-index", "1500");
+                    },
+                    error: function(e) {
+                        $("#result").text(e.responseText);
+                        console.log("ERROR : ", e);
+                    }
+
+       })        
+
+});    
+
+
+/* method */
+$("#msubmit").click(function (event) {
+    event.preventDefault();
+    var form = $('#method')[0];
+    var data = new FormData(form);
+
+            $.ajax({
+                    headers: {
+                        "X-CSRFToken": token
+                    },
+                    type: "POST",
+                    enctype: 'multipart/form-data',
+                    url: "/addmethod",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    timeout: 600000,
+                    async: true,
+
+                    success: function(data) {
+                        $("#result").text(data);
+                        console.log("SUCCESS : ", data);
+                        $("#thankyouModal").modal('show')
+                        $("#thankyouModal").css("z-index", "1500");
+                    },
+                    error: function(e) {
+                        $("#result").text(e.responseText);
+                        console.log("ERROR : ", e);
+                    }
+
+       })        
+
+});    
+
+
+
+/* product */
+$("#psubmit").click(function (event) {
+    event.preventDefault();
+    var form = $('#product')[0];
+    var data = new FormData(form);
+
+            $.ajax({
+                    headers: {
+                        "X-CSRFToken": token
+                    },
+                    type: "POST",
+                    enctype: 'multipart/form-data',
+                    url: "/addproduct",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    timeout: 600000,
+                    async: true,
+
+                    success: function(data) {
+                        $("#result").text(data);
+                        console.log("SUCCESS : ", data);
+                        $("#thankyouModal").modal('show')
+                        $("#thankyouModal").css("z-index", "1500");
+                    },
+                    error: function(e) {
+                        $("#result").text(e.responseText);
+                        console.log("ERROR : ", e);
+                    }
+
+       })        
+
+});    
+
+
+
+/* product */
+$("#linksubmit").click(function (event) {
+    event.preventDefault();
+    var form = $('#link')[0];
+    var data = new FormData(form);
+
+            $.ajax({
+                    headers: {
+                        "X-CSRFToken": token
+                    },
+                    type: "POST",
+                    enctype: 'multipart/form-data',
+                    url: "/addproduct",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    timeout: 600000,
+                    async: true,
+
+                    success: function(data) {
+                        $("#result").text(data);
+                        console.log("SUCCESS : ", data);
+                        $("#thankyouModal").modal('show')
+                        $("#thankyouModal").css("z-index", "1500");
+                    },
+                    error: function(e) {
+                        $("#result").text(e.responseText);
+                        console.log("ERROR : ", e);
+                    }
+
+       })        
+
+});    
+
+
+
+
+/* LOAD DATA */
+
+
+
+    
+})
+    
+
+</script>
+    
+
+</body>
+
+{% endblock %}
